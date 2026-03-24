@@ -1,48 +1,95 @@
-# Exp.No:24  
+# Exp.No:25  
 ## Multi-level Inheritance
 
 ---
 
 ### AIM  
-To write a Python program to get the name, age, and ID of a person and display them using multilevel inheritance.
+To write a Python program that collects a person's name, age, and salary, and displays them using multilevel inheritance in object-oriented programming.
+
 
 ---
 
 ### ALGORITHM
 
-1. Define the `Person` class:
-   - Inside the `Person` class, define the `__init__` method (constructor) with two parameters: `name` and `age`.
-   - Inside the `__init__` method, assign the `name` to `self.name` and `age` to `self.age`.
+Start the program.
 
-2. Define the `PersonDetails` class that inherits from the `Person` class:
-   - Inside the `PersonDetails` class, define the `__init__` method (constructor) with three parameters: `name`, `age`, and `person_id`.
-   - Inside the `__init__` method, call the `__init__` method of the `Person` class using `super()` to initialize `name` and `age`.
-   - Assign `person_id` to `self.person_id`.
+Define class a (base class):
 
-3. Define the `DisplayDetails` class that inherits from the `PersonDetails` class:
-   - Inside the `DisplayDetails` class, define the `__init__` method (constructor) with three parameters: `name`, `age`, and `person_id`.
-   - Inside the `__init__` method, call the `__init__` method of the `PersonDetails` class using `super()` to initialize `name`, `age`, and `person_id`.
+In the constructor init(), get input for:
 
-4. Inside the `DisplayDetails` class, define the `show_details` method:
-   - Inside the `show_details` method, return a formatted string with `self.name`, `self.age`, and `self.person_id`.
+x → Name (string)
 
-5. Prompt the user to enter `name` (string), `age` (integer), and `person_id` (integer).
+a → Age (integer)
 
-6. Create an instance `person` of the `DisplayDetails` class, passing `name`, `age`, and `person_id` to the constructor.
+b → Salary (integer)
 
-7. Call the `show_details` method on the `person` object and print the result.
+Define class b inheriting from a:
 
-8. Terminate the program.
+Define dis1() to return name.
+
+Define class c inheriting from a:
+
+Define dis2() to return age.
+
+Define class d inheriting from a:
+
+Define dis3() to return salary.
+
+Define class e inheriting from b, c, and d:
+
+Use pass since it inherits everything needed.
+
+Create an object y of class e.
+
+Print the outputs from dis1(), dis2(), and dis3().
+
+End the program.
 
 ---
 
 ### PROGRAM
+class a:
 
-```
+   def __init__(self):
+   
+   self.x=input()
+   
+   self.a=int(input())
+   
+   self.b=int(input())
+        
+class b(a):
+
+   def dis1(self):
+   
+   return self.x
+    
+class c(a):
+
+ def dis2(self):
+ 
+ return self.a 
+ 
+class d(a):
+
+   def dis3(self):
+   
+ return self.b
+        
+class e(b,c,d):
+
+   pass
+
+y=e()
+
+print(y.dis1() ,y.dis2() ,y.dis3())
 
 
-```
+### OUTPUT  
 
-### OUTPUT
+![image](https://github.com/user-attachments/assets/534030ec-de3d-42fd-91f8-cb7345cfa810)
+
+
 
 ### RESULT
+Thus the python program was initiated and implemented successfully.
